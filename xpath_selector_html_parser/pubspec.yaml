@@ -7,7 +7,10 @@ environment:
   sdk: '>=2.12.0 <3.0.0'
 
 dependencies:
-  xpath_selector: ^3.0.0
+  xpath_selector:
+    git:
+      url: https://github.com/xxzj990/xpath_selector.git
+      path: xpath_selector
   html: ^0.15.0
 
 dev_dependencies:
