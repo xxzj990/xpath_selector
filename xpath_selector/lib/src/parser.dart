@@ -13,7 +13,7 @@ List<List<Selector>> parseSelectGroup(String xpath) {
     final path = _path.trim();
     final xpathItem =
         xpathGroup.allMatches(path).map((e) => e.group(0)!.trim());
-    selectorList.add(xpathItem.map(_parseSelector).toList());
+    selectorList.add(xpathItem.where((element) => element.startsWith('//') || element.startsWith('/')).map(_parseSelector).toList());
   }
 
   return selectorList;
